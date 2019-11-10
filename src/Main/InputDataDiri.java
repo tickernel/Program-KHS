@@ -1404,6 +1404,18 @@ public class InputDataDiri extends javax.swing.JFrame {
         listOfDummyData.add(data);
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(listOfDummyData);
         System.out.println(dataSource.getRecordCount());
+        params.put("dosenp", "(" + padosen + ")");
+        params.put("nama", nama);
+        params.put("nim", nim);
+        params.put("semester", semester);
+        String j = (String) pa.getSelectedItem();
+        if (j.equals("PUTU BAGUS ADIDYANA A.P., ST., M.Kom.")) {
+            params.put("nodosenp", "198910222 ----");
+        }
+        if (j.equals("NOVA NOOR KAMALA SARI, ST., M.Kom.")) {
+            params.put("nodosenp", "198904072 ----");
+        }
+        params.put("jurusan", "DBC1 TEK.INFORMATIKA S1");
         totalbeb = bebpai + bebbing + bebap + bebsd + bebmd + bebso + bebpak + bebkal;
         totallulus = lulbebpai + lulbebbing + lulbebap + lulbebsd + lulbebmd + lulbebso + lulbebpak + lulbebkal;
         totmutusem = HKn1 + HKn2 + HKn3 + HKn4 + HKn5 + HKn6 + HKn7 + HKn8;
@@ -1422,18 +1434,6 @@ public class InputDataDiri extends javax.swing.JFrame {
         params.put("bebankum", bebankumul);
         params.put("luluskum", luluskumul);
         params.put("sksyad", sksyad);
-        params.put("dosenp", "(" + padosen + ")");
-        params.put("nama", nama);
-        params.put("nim", nim);
-        params.put("semester", semester);
-        String j = (String) pa.getSelectedItem();
-        if (j.equals("PUTU BAGUS ADIDYANA A.P., ST., M.Kom.")) {
-            params.put("nodosenp", "198910222 ----");
-        }
-        if (j.equals("NOVA NOOR KAMALA SARI, ST., M.Kom.")) {
-            params.put("nodosenp", "198904072 ----");
-        }
-        params.put("jurusan", "DBC1 TEK.INFORMATIKA S1");
         params.put("dataSource", dataSource);
         //net.sf.jasperreports.engine.JRDataSource
         try {
